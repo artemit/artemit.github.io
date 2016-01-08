@@ -59,6 +59,9 @@ a {
 
 /* Footer */
 .site-footer {
+  .contact-us {
+    margin: 40px 4px;
+  }
   .copyright {
     margin: 40px 4px 4px;
   }
@@ -69,5 +72,31 @@ a {
   .entry {
     background-color: $entry-background-color;
     color: $entry-color;
+  }
+}
+
+.pure-form {
+  .pure-radio {
+    width: auto !important;
+  }
+}
+
+.image-book {
+  display: inline-block;
+  .image-face {
+    display: none;
+    max-height: 100px;
+  }
+  .image-cover {
+    display: block;
+    max-height: 100px;
+  }
+  &:hover {
+    .image-face {
+      display: block;
+    }
+    .image-cover {
+      display: none;
+    }
   }
 }
