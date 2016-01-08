@@ -5,10 +5,8 @@ $font-size: 16px;
 
 $text-color: #070707;
 $background-color: #f7f7f7;
-$entry-background-color: #000;
-$entry-color: #fff;
-$accent-color: #BC2208;
-$subaccent-color: #E14120;
+$accent-color: #E14120;
+$subaccent-color: #BC2208;
 
 /* Overall */
 
@@ -20,6 +18,8 @@ body {
   font-size: $font-size;
   background-color: $background-color;
   color: $text-color;
+  margin: 0 auto;
+  max-width: 1024px;
 }
 
 a {
@@ -55,48 +55,70 @@ a {
   .hero {
     margin: 40px 4px;
   }
+
+  .overview {
+    width: 95%;
+    margin: auto;
+  }
 }
 
 /* Footer */
 .site-footer {
   .contact-us {
-    margin: 40px 4px;
+    margin: 30px 4px 10px;
   }
   .copyright {
-    margin: 40px 4px 4px;
+    margin: 10px 4px 4px;
   }
 }
 
 /* Content */
 .site-content {
-  .entry {
-    background-color: $entry-background-color;
-    color: $entry-color;
+  .entry-header {
+    background-color: $text-color;
+    color: $background-color;
   }
-}
 
-.pure-form {
-  .pure-radio {
-    width: auto !important;
+  .entry-cell {
+    padding: 2px 4px;
   }
-}
 
-.image-book {
-  display: inline-block;
-  .image-face {
-    display: none;
-    max-height: 100px;
+  .entry-divider {
+    padding: 10px 0px;
   }
-  .image-cover {
-    display: block;
-    max-height: 100px;
-  }
-  &:hover {
-    .image-face {
-      display: block;
+
+  .pure-form {
+    .pure-radio {
+      width: auto !important;
     }
-    .image-cover {
-      display: none;
+  }
+
+  .image-icon {
+    display: inline;
+    max-height: 60px;
+    padding: 20px 2px 10px;
+  }
+
+  .image-container {
+    margin: 10px 2px;
+    .image-book {
+      display: inline-block;
+      .image-face {
+        display: none;
+        max-height: 80px;
+      }
+      .image-cover {
+        display: block;
+        max-height: 80px;
+      }
+      &:hover {
+        .image-face {
+          display: block;
+        }
+        .image-cover {
+          display: none;
+        }
+      }
     }
   }
 }
