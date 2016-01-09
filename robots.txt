@@ -1,0 +1,3 @@
+User-agent: *
+Disallow:
+Sitemap: http://artemit.com/sitemap.xml

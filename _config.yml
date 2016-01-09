@@ -1,16 +1,17 @@
-# Site settings
 title: Artemit
 description: >
-  Artemit provides startups, non-profits, and corporations with
-  a skilled network of experts dedicated to rapidly starting their venture,
+  Artemit provides startups, non-profits, and corporations a skilled 
+  network of experts dedicated to rapidly starting their venture,
   building their new concepts, and revamping their existing projects.
-baseurl: "/"
 url: "http://artemit.com"
 organization: Artemit LLC
 
 sass:
   sass_dir: /assets/_sass
   style: compressed
+
+gems:
+  - jekyll-sitemap
 
 exclude:
   - Gemfile
