@@ -5,8 +5,9 @@ $font-size: 16px;
 
 $text-color: #070707;
 $background-color: #f7f7f7;
-$accent-color: #E14120;
-$subaccent-color: #BC2208;
+$inner-text-color: #f7f7f7;
+$accent-color: #2B8AFF;
+$subaccent-color: #2476DB;
 
 /* Overall */
 
@@ -14,12 +15,15 @@ html, button, input, select, textarea, .pure-g [class *= "pure-u"] {
   font-family: $font-family;
 }
 
+h1, h2, h3, h4, h5, h6 {
+  font-weight: normal;
+}
+
 body {
   font-size: $font-size;
   background-color: $background-color;
   color: $text-color;
   margin: 0 auto;
-  max-width: 1024px;
 }
 
 a {
@@ -30,7 +34,6 @@ a {
     color: $accent-color;
   }
   &:hover, &:focus, &:active {
-    font-weight: bold;
     color: $subaccent-color;
   }
 }
@@ -38,6 +41,12 @@ a {
 .text {
   &.center {
     text-align: center;
+  }
+  &.right {
+    text-align: right;
+  }
+  &.left {
+    text-align: left;
   }
   &.lower{
     text-transform: lowercase;
@@ -50,20 +59,54 @@ a {
   }
 }
 
+.full-expand {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.full-background-image {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: left top;
+  background-attachment: fixed;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+.full-dimmer {
+  background-color: $accent-color;
+  opacity: .86;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+.full-block {
+  display: table;
+  width: 100%;
+  height: 100%;
+  .full-block-layer {
+    display: table-cell;
+    vertical-align: middle;
+    .full-block-content {
+      display: inline-block;
+    }
+  }
+}
+
+
 /* Header */
 .site-header {
-  .hero {
-    margin: 40px 4px;
-  }
-
-  .overview {
-    width: 95%;
-    margin: auto;
-  }
+  margin: 0 auto;
 }
 
 /* Footer */
 .site-footer {
+  margin: 0 auto;
   .contact-us {
     margin: 24px 4px 10px;
   }
@@ -74,13 +117,7 @@ a {
 
 /* Content */
 .site-content {
-  .entry-header {
-    background-color: $text-color;
-    color: $background-color;
-    h2 {
-      margin: 14px 0;
-    }
-  }
+  margin: 0 auto;
 
   .entry-cell {
     padding: 24px 4px;
@@ -103,21 +140,78 @@ a {
     .image-book {
       display: inline-block;
       .image-face {
-        display: none;
-        max-height: 80px;
+        display: block;
+        max-height: 100px;
       }
       .image-cover {
-        display: block;
-        max-height: 80px;
+        display: none;
+        max-height: 100px;
       }
       &:hover {
         .image-face {
-          display: block;
-        }
-        .image-cover {
           display: none;
         }
+        .image-cover {
+          display: block;
+        }
       }
+    }
+  }
+
+  .hero {
+    position: relative;
+    color: $inner-text-color;
+    padding: 15%;
+
+    .hero-title {
+      font-size: 1.8em;
+    }
+    .hero-image {
+      background-image: url("/assets/img/icons/world.png");
+    }
+    .hero-overlay {
+      background-color: $accent-color;
+    }
+
+    h1 {
+      padding: 0;
+      margin: 0;
+    }
+  }
+
+  .skills-grid {
+    .skills-header {
+      padding: 1em .4em;
+    }
+  }
+
+  .client-grid {
+    background-color: #eaeaea;
+
+    & > div {
+      margin: 0 auto;
+      max-width: 1024px;
+    }
+
+    .client-header {
+      padding: 1em .4em;
+    }
+  }
+
+  .programs-grid {
+    .startups-grid {
+      background-color: #177fff;
+      color: $inner-text-color;
+    }
+
+    .non-profits-grid {
+      background-color: #eb7500;
+      color: $inner-text-color;
+    }
+
+    .corporations-grid {
+      background-color: #806eff;
+      color: $inner-text-color;
     }
   }
 }
