@@ -1,7 +1,7 @@
 /* Variables */
 
 $font-family: "Raleway", "Helvetica Neue", Helvetica, Arial, sans-serif;
-$font-size: 16px;
+$font-size: 18px;
 
 $text-color: #070707;
 $background-color: #f7f7f7;
@@ -71,14 +71,13 @@ a {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center top;
-  background-attachment: fixed;
   width: 100%;
   height: 100%;
   z-index: -1;
 }
 
 .full-dimmer {
-  background-color: $accent-color;
+  background-color: $text-color;
   opacity: .4;
   width: 100%;
   height: 100%;
@@ -160,63 +159,63 @@ a {
 
   .hero {
     position: relative;
-    color: $inner-text-color;
-    padding: 15%;
+    padding: 8% 0;
+    text-shadow: 2px 3px 3px $text-color;
+    color: $background-color;
+    z-index: 2;
 
     .hero-title {
       font-size: 1.8em;
-      text-shadow: 2px 3px 3px $text-color;
+      padding: 0 12%;
     }
     .hero-image {
       background-image: url("/assets/img/icons/new-york-skyline.jpg");
-    }
-    .hero-overlay {
-      background-color: $text-color;
     }
 
     h1 {
       padding: 0;
       margin: 0;
     }
-  }
 
-  .skills-grid {
-    position: relative;
-    .skills-image {
-      background-image: url("/assets/img/icons/world.png");
-      background-position: left top;
+    h3 {
+      font-style: italic;
     }
-    .skills-overlay {
-      background-color: $background-color;
-      opacity: .86;
-    }
-    .skills-header {
-      padding: 1em .4em;
-    }
-  }
 
-  .client-grid {
-    background-color: #fff;
-    border: 2px solid darken(#fff, 6.5%);
-    .client-header {
-      padding: 1em .4em;
+    .programs-grid {
+      padding: 0 12%;
+      .startups-grid h2 {
+        color: #53a0ff;
+      }
+
+      .non-profits-grid h2 {
+        color: #eb7500;
+      }
+
+      .corporations-grid h2 {
+        color: #b5aaff;
+      }
     }
   }
+}
 
-  .programs-grid {
-    .startups-grid {
-      background-color: #177fff;
-      color: $inner-text-color;
-    }
+/* Particles */
 
-    .non-profits-grid {
-      background-color: #eb7500;
-      color: $inner-text-color;
-    }
+.particle {
+  position: absolute;
+  z-index: -1;
+  background-color: $accent-color;
+  padding: 2px;
+  border-radius: 50%;
+  opacity: .4;
+}
 
-    .corporations-grid {
-      background-color: #806eff;
-      color: $inner-text-color;
-    }
+@for $i from 1 through 50 {
+  $top: percentage(random(90)/100);
+  $left: percentage(random(90)/100);
+  $delay: random(1000) + ms;
+
+  .particle-#{$i} {
+    top: $top;
+    left: $left;
   }
 }
