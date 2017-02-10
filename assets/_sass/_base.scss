@@ -197,25 +197,3 @@ a {
     }
   }
 }
-
-/* Particles */
-
-.particle {
-  position: absolute;
-  z-index: -1;
-  background-color: $accent-color;
-  padding: 2px;
-  border-radius: 50%;
-  opacity: .4;
-}
-
-@for $i from 1 through 50 {
-  $top: percentage(random(90)/100);
-  $left: percentage(random(90)/100);
-  $delay: random(1000) + ms;
-
-  .particle-#{$i} {
-    top: $top;
-    left: $left;
-  }
-}
