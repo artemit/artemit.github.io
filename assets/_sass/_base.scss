@@ -65,11 +65,11 @@ a {
     letter-spacing: .2em;
 
     span:first-child {
-      border-bottom: solid;
+      border-top: solid;
     }
 
     span:last-child {
-      border-top: solid;
+      border-bottom: solid;
     }
 
     &:hover {
