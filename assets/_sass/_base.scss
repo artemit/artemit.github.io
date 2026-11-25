@@ -61,6 +61,13 @@ a {
 .site-header {
   margin: 0 auto;
 
+  /* Matches the h1 styling the logo had before it became a div */
+  .site-title {
+    font-size: 2em;
+    font-weight: lighter;
+    margin: .67em 0;
+  }
+
   .logo {
     letter-spacing: .2em;
 
